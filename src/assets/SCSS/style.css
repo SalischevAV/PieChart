@@ -97,6 +97,7 @@ svg {
           transform: rotate(-90deg);
   background: none;
   border-radius: 50%;
+  margin: 15px;
 }
 
 g {
@@ -119,15 +120,40 @@ circle:hover {
 
 text {
   font-size: 2px;
-  fill: #000;
+  fill: #fff;
   text-anchor: start;
   alignment-baseline: middle;
   display: none;
   x: 0;
   y: 0;
+  -webkit-transform: scaleX(-20%);
+          transform: scaleX(-20%);
 }
 
 circle:hover + text {
   display: inline;
+}
+
+.data {
+  margin: 15px;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+form input {
+  margin: 10px;
+}
+
+body {
+  font-size: 14px;
+  color: #566885;
+  background-color: #E9E6E6;
 }
 /*# sourceMappingURL=style.css.map */

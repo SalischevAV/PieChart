@@ -1,6 +1,16 @@
 @import 'nullstyle';
+@import 'colors';
 
 @import 'container';
 @import 'svg';
 @import 'circle';
 @import 'text';
+@import 'data';
+@import 'form';
+
+body{
+    font-size: 14px;
+    color: $font-color;
+    background-color: $background-color;
+    
+}
