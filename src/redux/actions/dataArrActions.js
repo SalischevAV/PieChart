@@ -1,9 +1,15 @@
-import {ADD_ITEM, REMOVE_ITEM  } from '../types';
+import {ADD_ITEM, REMOVE_ITEM, CLEAR_ARR  } from '../types';
 import calcPercentage from '../../utils/calcPercentage';
 
-export function addItem(item, arr){
+export function addItem(item){
     return {
         type: ADD_ITEM,
-        payload: calcPercentage(arr.concat([item]))
+        payload: ([item])
+    }
+}
+
+export function clearArr(){
+    return{
+        type: CLEAR_ARR
     }
 }

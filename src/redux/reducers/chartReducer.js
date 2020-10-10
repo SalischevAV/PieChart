@@ -1,4 +1,4 @@
-import {ADD_ITEM, REMOVE_ITEM  } from '../types';
+import {ADD_ITEM, REMOVE_ITEM, CLEAR_ARR  } from '../types';
 
 const initialState ={
     arr:[]
@@ -7,7 +7,9 @@ const initialState ={
 const chartReducer = (state=initialState, action)=>{
     switch(action.type){
         case(ADD_ITEM):
-            return {...state, arr: action.payload};
+            return {...state, arr: state.arr.concat(action.payload)};
+        case(CLEAR_ARR)    :
+            return initialState;
         case(REMOVE_ITEM):
     default: return state;
 }

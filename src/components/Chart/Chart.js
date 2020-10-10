@@ -3,7 +3,6 @@ import { rotationPercentage, sumRotationPercentage, rotationCoefficient } from '
 
 
 function Chart({arr}) {
-
     return (
             <svg viewBox="-16 -16 32 32">
                     {
