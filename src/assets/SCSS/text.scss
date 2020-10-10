@@ -1,0 +1,13 @@
+text {
+    font-size:2px;
+    fill: #fff;
+    text-anchor: start;
+    alignment-baseline: middle;
+    display: none;
+    x: 0;
+    y: 0;
+  }
+
+  circle:hover + text{
+    display: inline;
+}

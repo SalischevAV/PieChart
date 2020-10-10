@@ -1,0 +1,18 @@
+g {
+  fill: none;
+  stroke-width: 100%;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+}
+
+/* circle */
+circle {
+  r: 16;
+  cx: 0;
+  cy: 0;
+}
+
+circle:hover {
+  opacity: 0.5;
+}
+/*# sourceMappingURL=circle.css.map */

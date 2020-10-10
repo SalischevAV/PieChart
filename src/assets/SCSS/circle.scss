@@ -1,0 +1,46 @@
+g {
+    fill: none;
+    stroke-width: 100%;
+    transition: all 0.5s linear;
+}
+
+/* circle */
+circle{
+    r: 16;
+    cx: 0;
+    cy: 0;
+
+
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+// .c1 {
+//     stroke: rgb(47, 146, 88);
+//     stroke-dasharray: calc((6.28*16/100) * 30) calc(6.28*16);
+// }
+
+
+
+// .c2 {
+//     stroke: rgb(64, 56, 95);
+//     stroke-dasharray: calc((6.28*16/100) * 40) calc(6.28*16);
+//     stroke-dashoffset: calc((6.28*16/100) * -30);
+// }
+
+
+
+// .c3 {
+//     stroke: rgb(175, 185, 25);
+//     stroke-dasharray: calc((6.28*16/100) * 20) calc(6.28*16);
+//     stroke-dashoffset: calc((6.28*16/100) * -70);
+// }
+
+
+
+// .c4 {
+//     stroke: rgb(160, 23, 119);
+//     stroke-dasharray: calc((6.28*16/100) * 10) calc(6.28*16);
+//     stroke-dashoffset: calc((6.28*16/100) * -90);
+// }
