@@ -1,3 +1,22 @@
+@import 'colors';
+
 .data{
+    width: 500px;
+    background-color: #fff;
     margin: 15px;
+    border-radius: 5px;
+
+    &__wraper{
+        width: 100%;
+        max-width: 500px;
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
+
+input{
+    margin: 10px;
+    height: 30px;
+    background: $background-color;
+    opacity: 0.5;
 }

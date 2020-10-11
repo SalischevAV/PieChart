@@ -6,5 +6,8 @@ svg {
   background: none;
   border-radius: 50%;
   margin: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=svg.css.map */

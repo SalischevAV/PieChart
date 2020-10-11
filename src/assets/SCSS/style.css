@@ -71,20 +71,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .container {
-  margin-top: 200px;
+  margin-top: 50px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -98,6 +91,9 @@ svg {
   background: none;
   border-radius: 50%;
   margin: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 g {
@@ -135,31 +131,74 @@ circle:hover + text {
 }
 
 .data {
+  width: 500px;
+  background-color: #fff;
   margin: 15px;
+  border-radius: 5px;
 }
 
-form {
+.data__wraper {
+  width: 100%;
+  max-width: 500px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
-form input {
+input {
   margin: 10px;
+  height: 30px;
+  background: #E9E6E6;
 }
 
-button {
+.button {
   width: 50px;
   height: 30px;
   border-radius: 5px;
-  background-color: #0ee220;
+  background-color: #E9E6E6;
+}
+
+.legend {
+  width: 150px;
+  border: 3px solid #566885;
+  background: #fff;
+  padding-top: 10px;
+}
+
+.legend:hover {
+  cursor: pointer;
+}
+
+.legend__item {
+  margin-left: 15px;
+  position: relative;
+  height: 20px;
+}
+
+.legend__color {
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+}
+
+.legend__item--text {
+  overflow: hidden;
+  margin-left: 21px;
+}
+
+li {
+  height: 25px;
+  margin-top: 10px 0;
 }
 
 body {
-  font-size: 14px;
+  font-size: 18px;
   color: #566885;
   background-color: #E9E6E6;
 }

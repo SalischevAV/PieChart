@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addItem } from '../../redux/actions/dataArrActions';
+import { addItem, clearArr } from '../../redux/actions/dataArrActions';
 
-function DataInput() {
+function DataInput(props) {
     const [dataItem, setDataItem] = useState({ title: '', quantity: '' });
     const dispatch = useDispatch();
 
@@ -19,6 +19,11 @@ function DataInput() {
         cleareState();
     }
 
+    const clearClickHandler = event =>{
+        event.preventDefault();
+        dispatch(clearArr());
+    }
+
     const changeInputHandler = event => {
         event.persist();
         setDataItem(previousState => ({
@@ -30,11 +35,10 @@ function DataInput() {
 
     return (
         <div className='data'>
-            <form>
-                <input type='text' placeholder='title' name='title' onChange={changeInputHandler} value={dataItem.title} />
-                <input type='number' min='0' placeholder='amount' name='quantity' onChange={changeInputHandler} value={dataItem.quantity} />
-                <button onClick={addClickHandler}>ok</button>
-            </form>
+                    <input type='text' placeholder='title' name='title' onChange={changeInputHandler} value={dataItem.title} />
+                    <input type='number' min='1' placeholder='amount' name='quantity' onChange={changeInputHandler} value={dataItem.quantity} />
+                    <button className='button' onClick={addClickHandler}>add</button>
+                    <button className='button' onClick={clearClickHandler}>clear</button>
         </div>
     )
 }

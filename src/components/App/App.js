@@ -1,30 +1,32 @@
-import React from 'react';
-import { useSelector } from 'react-redux';
+import React, {useEffect} from 'react';
+import { useSelector, useDispatch} from 'react-redux';
 import Chart from '../Chart/Chart';
 import DataInput from '../DataInput/DataInput';
-
-import calcPercentage from '../../utils/calcPercentage';
-
+import Legend from '../Legend/Legend';
+import { transformArr } from '../../redux/actions/dataArrActions';
 import '../../assets/SCSS/style.css';
-
-  // const arr = [
-  //   { title: 'apple', quantity: 256,  },
-  //   { title: 'grape', quantity: 120,  },
-  //   { title: 'waterlemon', quantity: 325,},
-  //   { title: 'cherry', quantity: 178,  },
-  //   { title: 'lemon', quantity: 89,  },   
-  //   { title: 'bullets', quantity: 852,  },
-  //   ]
-
 
 
 function App() {
+  const dispatch = useDispatch();
   const arr = useSelector(state => state.chart.arr);
+  const arrWithColorsAndPercentage = useSelector(state=> state.chart.arrWithColorsAndPercentage)
+  useEffect(()=>{
+    dispatch(transformArr(arr))
+  },[arr])
+
+
+  
   return (
-    <div className="container"> 
-        <DataInput arr={arr} />
-        <Chart arr={calcPercentage(arr)} />
-    </div>
+    <>
+      <div className="container">  
+        <DataInput />
+      </div>
+      <div className='container'>
+        <Chart arr={arrWithColorsAndPercentage} />
+        <Legend arr={arrWithColorsAndPercentage} /> 
+      </div>
+    </>
   );
 }
 

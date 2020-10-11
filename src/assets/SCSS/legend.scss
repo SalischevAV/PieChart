@@ -1,0 +1,39 @@
+@import 'colors';
+
+.legend{
+    width: 150px;
+    border: 3px solid $font-color;
+    background: #fff;
+    padding-top: 10px;
+
+    &:hover{
+        cursor: pointer;
+    }
+
+    &__item{
+        margin-left: 15px;
+        position: relative;
+        height: 20px;
+    }
+
+    &__color{
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+    }
+
+    &__item--text{
+        overflow: hidden;
+        margin-left: 21px;
+    }
+}
+
+
+
+li {
+    height: 25px;
+    margin-top: 10px 0;
+}

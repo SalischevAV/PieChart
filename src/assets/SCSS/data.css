@@ -1,4 +1,25 @@
 .data {
+  width: 500px;
+  background-color: #fff;
   margin: 15px;
+  border-radius: 5px;
+}
+
+.data__wraper {
+  width: 100%;
+  max-width: 500px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+input {
+  margin: 10px;
+  height: 30px;
+  background: #E9E6E6;
+  opacity: 0.5;
 }
 /*# sourceMappingURL=data.css.map */

@@ -6,11 +6,11 @@
 @import 'circle';
 @import 'text';
 @import 'data';
-@import 'form';
 @import 'button';
+@import 'legend';
 
 body{
-    font-size: 14px;
+    font-size: 18px;
     color: $font-color;
     background-color: $background-color;
     
