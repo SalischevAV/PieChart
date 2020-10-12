@@ -6,8 +6,8 @@ text {
   display: none;
   x: 0;
   y: 0;
-  -webkit-transform: scaleX(-20%);
-          transform: scaleX(-20%);
+  -webkit-transform: translate(40px);
+          transform: translate(40px);
 }
 
 circle:hover + text {

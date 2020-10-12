@@ -6,7 +6,7 @@ text {
     display: none;
     x: 0;
     y: 0;
-    transform: scaleX(-20%);
+    transform: translate(40px);
   }
 
   circle:hover + text{
