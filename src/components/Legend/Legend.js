@@ -1,6 +1,7 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { removeItem } from '../../redux/actions/dataArrActions';
+import { removeItem,  clearArr } from '../../redux/actions/dataArrActions';
+
 
 function Legend({ arr }) {
 
@@ -9,6 +10,11 @@ function Legend({ arr }) {
     const removeItemHandler = (item) => {
         dispatch(removeItem(item));
 
+    }
+
+    const clearClickHandler = event => {
+        event.preventDefault();
+        dispatch(clearArr());
     }
 
     if(arr.length) {
@@ -36,12 +42,13 @@ function Legend({ arr }) {
                             >
                              </div>
                             <div className='legend__item--text'>
-                                {item.title} : {item.percentage.toFixed(4)}
+                                {item.title} : {item.quantity}
                             </div>
                         </div>
                     </li>
                 )}
             </ul>
+            <button className='button legend__button' onClick={clearClickHandler}>clear chart</button>
         </div>
                             
     )}

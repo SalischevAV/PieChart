@@ -2,18 +2,24 @@
 
 .legend{
     width: 150px;
-    border: 3px solid $font-color;
+    border: 2px solid $font-color;
+    border-radius: 5px;
     background: #fff;
-    padding-top: 10px;
-
-    &:hover{
-        cursor: pointer;
-    }
+    padding: 10px;
+    display: flex;
+    flex-direction: column;   
 
     &__item{
+        width: 100%;
+        max-width: 130px;
         margin-left: 15px;
+        margin-bottom: 10px;
         position: relative;
         height: 20px;
+    }
+
+    &__item:hover{
+        cursor: pointer;
     }
 
     &__color{
@@ -28,6 +34,10 @@
     &__item--text{
         overflow: hidden;
         margin-left: 21px;
+    }
+
+    &__button{
+        align-self: center;
     }
 }
 

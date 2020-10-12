@@ -1,5 +1,5 @@
-import React, {useEffect} from 'react';
-import { useSelector, useDispatch} from 'react-redux';
+import React, { useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
 import Chart from '../Chart/Chart';
 import DataInput from '../DataInput/DataInput';
 import Legend from '../Legend/Legend';
@@ -10,21 +10,21 @@ import '../../assets/SCSS/style.css';
 function App() {
   const dispatch = useDispatch();
   const arr = useSelector(state => state.chart.arr);
-  const arrWithColorsAndPercentage = useSelector(state=> state.chart.arrWithColorsAndPercentage)
-  useEffect(()=>{
+  const arrWithColorsAndPercentage = useSelector(state => state.chart.arrWithColorsAndPercentage)
+  useEffect(() => {
     dispatch(transformArr(arr))
-  },[arr])
+  }, [arr]);
 
 
-  
+
   return (
     <>
-      <div className="container">  
+      <div className="container">
         <DataInput />
       </div>
       <div className='container'>
         <Chart arr={arrWithColorsAndPercentage} />
-        <Legend arr={arrWithColorsAndPercentage} /> 
+        <Legend arr={arrWithColorsAndPercentage} />
       </div>
     </>
   );

@@ -1,18 +1,29 @@
 .legend {
   width: 150px;
-  border: 3px solid #566885;
+  border: 2px solid #566885;
+  border-radius: 5px;
   background: #fff;
-  padding-top: 10px;
-}
-
-.legend:hover {
-  cursor: pointer;
+  padding: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .legend__item {
+  width: 100%;
+  max-width: 130px;
   margin-left: 15px;
+  margin-bottom: 10px;
   position: relative;
   height: 20px;
+}
+
+.legend__item:hover {
+  cursor: pointer;
 }
 
 .legend__color {
@@ -27,6 +38,12 @@
 .legend__item--text {
   overflow: hidden;
   margin-left: 21px;
+}
+
+.legend__button {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 li {
